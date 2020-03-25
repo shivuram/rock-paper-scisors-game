@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.restart-btn, .choice-btn {
+  /*display: none;*/
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s;
+  }
+
+.restart-btn {
+    display: none;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.restart-btn:hover {
+  background: var(--win-color);
+  color: #fff;
+  box-shadow: 4px 4px 6px 0px rgba(168,168,168,1);
+}
+
+.choice-btn:hover {
+  background: var(--win-color);
+  color: #fff;
+  box-shadow: 4px 4px 6px 0px rgba(168,168,168,1);
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.score p:first-child {
+  background: var(--win-color);
+}
+
+.score p:last-child {
+  background: var(--lose-color);
+}
+
+.totalDraws {
+background: var(--dark-color);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.choice:hover {
+  color: var(--primary-color);
+}
+
+/*win, loss, draw message box placement*/
+.game-message-placement {
+  text-align: center;
+  width: 300px;
+  margin: 50px auto 0px;
+}
+
+#game-message {
+  font-size: 50px;
+  height: 185px;
+}
+
+.game-won{
+background-color: var(--win-color);
+  color: white ;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.game-draw {
+ background-color: var(--dark-color);
+    color: white ;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+  
+.game-lose {
+  background-color: var(--lose-color);
+  border-radius: 10px;
+  color: white;
+   margin-bottom: 10px;
+}
+
+.computer-message{
+  font-size: 16px;
+}
+
